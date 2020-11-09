@@ -11,9 +11,14 @@
 
 (function() {
 
-    document.getElementById("run").addEventListener("click", function() {
+    let numbers =['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21'];
 
-        // your code here
+
+    document.getElementById("run").addEventListener("click", function() {
+            let randomnumber = numbers [Math.floor(Math.random()*numbers.length)];
+            let randomsquare = Math.sqrt(randomnumber);
+            alert("Square root of " + randomnumber + " is " + randomsquare);
+
 
     });
 

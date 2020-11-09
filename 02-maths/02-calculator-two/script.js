@@ -9,11 +9,16 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(() => {
+(function() => {
     // to get the value of an input: document.getElementById("element-id").value
+    var one = document.getElementById("op-one");
+    var two = document.getElementById("op-two");
 
     const performOperation = operation => {
-        // perform the operation
+        switch(result){
+            case "add":
+
+        }
     };
 
     Array.from(document.querySelectorAll("button.operator")).forEach($btn =>
