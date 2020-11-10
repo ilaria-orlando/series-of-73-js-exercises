@@ -13,9 +13,27 @@
     
     // to get the value of an input: document.getElementById("element-id").value
 
+
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+        let input = parseInt(document.getElementById("number").value) ;
+
+
+        function factorial(input){
+            if (input < 0){
+                return 0;
+            }
+            else if (input === 0){
+                return 1;
+            }
+            else{
+                return input * factorial(input -1);
+
+            }
+        }
+
+        let answer = factorial(input);
+        alert("The factorial of " + input + " is " + answer);
 
     });
 
