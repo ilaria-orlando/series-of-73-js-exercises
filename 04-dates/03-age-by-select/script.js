@@ -9,8 +9,13 @@
 // NOTE: don't focus on the existing code structure for now.
 // You will have time to focus on it later.
 
-(function() {
+document.getElementById("run").addEventListener("click", function(){
+    let year = parseInt(document.getElementById("dob-year").value);
+    let date = new Date();
+    let curyear = date.getFullYear();
+    let age = curyear - year;
 
-    // your code here
+    document.getElementById("target").innerHTML = "Are You " + age + " years old?";
 
-})();
+
+});
