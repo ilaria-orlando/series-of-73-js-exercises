@@ -12,7 +12,15 @@
 (function() {
 
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
+    let date = new Date;
+    let today =  ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    let curDay = today[date.getDay()];
+    let curDate = date.getDate();
+    let month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+    let curMonth = month[date.getMonth()];
+    let year = date.getFullYear();
 
-    // your code here
+    document.getElementById("target").innerHTML = "Today's date is " + curDay + " " + curDate + " " + curMonth + " " + year;
+
 
 })();
