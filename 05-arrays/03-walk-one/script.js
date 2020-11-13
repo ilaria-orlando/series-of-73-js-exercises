@@ -25,7 +25,14 @@
         "grap",
         "cherry",
     ];
+    var i = -1;
 
-    // your code here
+
+    document.getElementById("run").onclick = function(){
+        if(i < 12){
+            i++;
+        }
+        console.log(fruits[i]);
+    }
 
 })();

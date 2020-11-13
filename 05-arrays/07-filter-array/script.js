@@ -89,6 +89,9 @@
         },
     ];
 
-    // your code here
+    document.getElementById("run").onclick = function(){
+        let kids = people.filter(person => person.age < 18);
+        console.log(kids);
+    }
 
 })();

@@ -89,6 +89,8 @@
         },
     ];
 
-    // your code here
-
+    document.getElementById("run").onclick = function() {
+        let findperson = people.findIndex( person => person.firstname === "Jean" && person.lastname === "Dupont");
+        console.log("Emailaddress: " + people[findperson].email + " Indexnr: " + findperson);
+    }
 })();
