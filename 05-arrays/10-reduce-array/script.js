@@ -89,6 +89,17 @@
         },
     ];
 
-    // your code here
+    let ages = [];
+
+    document.getElementById("run").addEventListener("click", function(){
+        for(i = 0; i < 15; i++){
+            let age = people[i].age;
+            ages.push(age);
+        }
+
+        let totalAges = ages.reduce((a, b) => a + b, 0);
+        console.log(totalAges);
+
+    });
 
 })();
