@@ -11,6 +11,11 @@
 
 (function() {
 
+    let button = document.getElementById("next");
+    let img = document.getElementsByTagName("img") [0];
+    let i = 0;
+    let newSrc;
+
     var gallery= [
         "../../_shared/img/bell.svg",
         "../../_shared/img/clock.svg",
@@ -19,6 +24,15 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+
+    button.addEventListener("click", function () {
+        i ++;
+        newSrc = gallery[i];
+        img.src = newSrc;
+        if (i === gallery.length){
+            i = 0;
+            img.src = gallery[0];
+        }
+    });
 
 })();
