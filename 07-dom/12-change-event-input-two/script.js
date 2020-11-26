@@ -10,7 +10,21 @@
 // You will have time to focus on it later.
 
 (function() {
+    let field = document.getElementById("pass-one");
+    let validity = document.getElementById("validity");
+    let input;
+    let numbercheck;
 
-    // your code here
+    field.addEventListener("input", function () {
+        input = field.value
+        numbercheck = input.match(/(\d)/g);
+
+        if (input.length >= 8 && numbercheck.length >= 2){
+            validity.innerHTML = "Ok";
+        }else{
+            validity.innerHTML = "Not Ok";
+        }
+
+    });
 
 })();
