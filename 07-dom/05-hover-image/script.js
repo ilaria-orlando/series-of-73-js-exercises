@@ -10,7 +10,18 @@
 // You will have time to focus on it later.
 
 (function() {
+    let imgTag = document.getElementsByTagName("img")[0];
+    let oriSrc = imgTag.getAttribute("src");
+    let hover = imgTag.getAttribute("data-hover");
 
-    // your code here
+    console.log(oriSrc);
+
+    imgTag.addEventListener("mouseover", function () {
+        imgTag.src = hover;
+    });
+
+    imgTag.addEventListener("mouseleave", function () {
+        imgTag.src = oriSrc;
+    });
 
 })();
